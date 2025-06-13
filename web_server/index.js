@@ -19,11 +19,16 @@ const server = http.createServer((req, res) => {
     // The `req.url` typically starts with a '/', so we remove it for file path
     let filePath = '.' + req.url; // e.g., './index.html', './random.html'
 
-    // Define method
-    //const method = req.method;
+    // Handle request to home path
+    if (req.url === '/') {
+        // Handle requests to the base URL
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('Server connected successfully');
+    }
+    
 
     // Handle the specific case for '/index.html'
-    if (req.url === '/index.html' /*&& method === 'GET'*/) {
+    else if (req.url === '/index.html' /*&& method === 'GET'*/) {
         // Construct the full path to index.html
         const indexPath = path.join(__dirname, 'index.html');
 
@@ -59,12 +64,6 @@ const server = http.createServer((req, res) => {
                 res.end(data); // Send the 404 file content
             }
         });
-    }
-
-    // Handle request to home path
-    else if (filePath.endsWith('/')) {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Server connected successfully');
     }
 
     // Handle all other requests (e.g., non-HTML files, unknown paths)
