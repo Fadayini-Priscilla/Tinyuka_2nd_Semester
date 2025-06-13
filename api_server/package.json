@@ -1,5 +1,15 @@
 {
+  "name": "api_server",
+  "version": "1.0.0",
+  "description": "Node JS Assessments",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Priscilla",
+  "license": "ISC",
   "dependencies": {
     "uuid": "^11.1.0"
-  }
+  },
+  "devDependencies": {}
 }
