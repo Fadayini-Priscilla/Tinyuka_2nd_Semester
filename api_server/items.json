@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Headphone",
+    "price": 7000,
+    "size": "m",
+    "id": "d4837372-7e19-4e07-8ef4-9791d866bc6d"
+  },
+  {
+    "name": "Laptop",
+    "price": 450000,
+    "size": "l",
+    "id": "8410522b-be4d-44b1-b880-1b3b1a6492bb"
+  },
+  {
+    "name": "Denim Jumpsuit",
+    "price": 14000,
+    "size": [
+      "l",
+      "m",
+      "s"
+    ],
+    "id": "1734283b-5368-4bb4-9792-9d5bcb9c704d"
+  }
+]
