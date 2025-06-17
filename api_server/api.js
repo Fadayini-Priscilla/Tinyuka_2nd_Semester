@@ -2,7 +2,7 @@
 const http = require('http'); // Used for creating HTTP server
 const url = require('url');   // Used for parsing URLs
 const dataHandler = require('../api_server/data.js'); // Custom module for file operations
-const { v4: uuidv4 } = require('uuid'); // For generating unique IDs (install with `npm install uuid`)
+const { v4: uuidv4 } = require('uuid'); // For generating unique IDs
 
 // Define the port the server will listen on
 const PORT = 4000;
